@@ -1,17 +1,5 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                bat 'javac src\\Hello.java'
-            }
-        }
-
-        stage('Run') {
-            steps {
-                bat 'java -cp src Hello'
-            }
-        }
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello from Jenkins!");
     }
 }
